@@ -1,3 +1,33 @@
 .navbar{
     border: 5px solid black;
 }
+
+.navbar{
+    border: 5px solid black;
+}
+
+.Title{
+    font-size: 75px;
+    text-align: center;
+    
+}
+
+.greeting{
+    text-align: center;
+    font-size: 50px;
+}
+
+.Intro{
+    text-align:left;
+    text-indent: 2%;
+}
+
+.start{
+    text-align: center;
+    font-size: 50px;
+}
+
+.guide{
+    text-align:left;
+    text-indent: 2%;
+}
