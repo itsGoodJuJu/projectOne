@@ -9,27 +9,43 @@
 .Title{
     font-size: 75px;
     text-align: center;
+    font-family:'Times New Roman', Times, serif;
+    font-style: italic;
+    font-weight: bold;
+    
     
 }
 
 .greeting{
     text-align: center;
     font-size: 50px;
+    font-family:inherit;
+    font-style: italic;
+    
 }
 
 .Intro{
     text-align:left;
     text-indent: 2%;
+    font-family:inherit;
+    font-style: italic;
+    
 }
 
 .start{
     text-align: center;
     font-size: 50px;
+    font-family:inherit;
+    font-style: italic;
+    
 }
 
 .guide{
     text-align:left;
     text-indent: 2%;
+    font-family:inherit;
+    font-style: italic;
+    
 }
 
 img {
