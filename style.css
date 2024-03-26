@@ -33,6 +33,21 @@
 }
 
 img {
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
+}
+
+.card {
+    display: flex;
+    float:inline-start;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    width: 1000px;
+    height: 100%;
+}
+
+#pfActress {
+    float: right;
+    width: 2000px;
 }
