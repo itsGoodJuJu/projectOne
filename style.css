@@ -9,27 +9,50 @@
 .Title{
     font-size: 75px;
     text-align: center;
+    font-family:'Times New Roman', Times, serif;
+    font-style: italic;
+    font-weight: bold;
+    padding: 25px;
+    margin: 10px;
+    
     
 }
 
 .greeting{
     text-align: center;
     font-size: 50px;
+    font-family:inherit;
+    font-style: italic;
+    
 }
 
 .Intro{
+    padding: 5px;
     text-align:left;
     text-indent: 2%;
+    font-family:inherit;
+    font-style: italic;
+    border-bottom: 2px solid black;
+    
 }
 
 .start{
     text-align: center;
     font-size: 50px;
+    font-family:inherit;
+    font-style: italic;
+    padding: 25px;
+    
 }
 
 .guide{
+    padding: 5px;
     text-align:left;
     text-indent: 2%;
+    font-family:inherit;
+    font-style: italic;
+    border-bottom: 2px solid black;
+    
 }
 
 img {
@@ -50,4 +73,20 @@ img {
 #pfActress {
     float: right;
     width: 2000px;
+}
+
+.foot{
+   display: flex;
+   justify-content: center;
+   margin-top: 300px;
+   border-top: 2px solid black;
+   font-family: cursive;
+   background-color: gold;
+}
+
+.webinfo{
+    padding: 35px;
+    margin: 20px;
+    border: 2px;
+    border-bottom: 2px solid black;
 }
