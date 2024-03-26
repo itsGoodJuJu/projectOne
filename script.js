@@ -17,7 +17,7 @@ function getActors(){
         console.log(data);
         for(j = 0; j < data.length; j++){
             // Creating a div container
-            let actorContainer = document.getElementById("1pf");
+            let actorContainer = document.getElementById("pfActor");
             actorContainer.classList.add("card");
 
             // Creating an image element for the actors
@@ -76,7 +76,7 @@ function getActresses(){
         console.log(data);
         for(j = 0; j < data.length; j++){
             // Creating a div container
-            let actressContainer = document.createElement("div");
+            let actressContainer = document.getElementById("pfActress");
             actressContainer.classList.add("card");
 
             // Creating an image element for the actresses
