@@ -55,10 +55,6 @@
     
 }
 
-img {
-    width: 200px;
-    height: 200px;
-}
 
 .card {
     display: flex;
@@ -82,6 +78,16 @@ img {
    border-top: 2px solid black;
    font-family: cursive;
    background-color: gold;
+}
+
+img {
+    width: 200px;
+    height: 200px;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
 }
 
 .webinfo{
