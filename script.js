@@ -116,3 +116,28 @@ function getActresses(){
 }
 // Actress function call
 getActresses();
+
+
+// Cast Building Function
+function buildCast() {
+    let castContainer = document.getElementById("castContainer");
+    
+
+}
+
+function addRow() {
+    document.addEventListener("DOMContentLoaded", function () {
+        let addRowContainer = document.getElementById("addOne");
+        let addButton = document.getElementById("addRowButton");
+    
+        function cloneElement() {
+            const elementToClone = document.querySelector(".anotherOne");
+            const clonedElement = elementToClone.cloneNode(true);
+            addRowContainer.appendChild(clonedElement);
+        }
+        addButton.addEventListener("click", cloneElement);
+    });
+}
+
+addRow();
+
