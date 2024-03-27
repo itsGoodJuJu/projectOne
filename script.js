@@ -140,7 +140,7 @@ fetch("https://superhero-api.p.rapidapi.com", requestOptions)
   .then((result) => {
     for (let i = 0; i < result.heros.length; i++) {
       // Container
-      let detailedHero = document.createElement("div");
+      let detailedHero = document.getElementById("pfhero");
       detailedHero.classList.add("card");
 
       // Create an hero image element
@@ -158,10 +158,10 @@ fetch("https://superhero-api.p.rapidapi.com", requestOptions)
       let combatTag = document.createElement("p");
 
       // Values
-      heroNameTag.innerText = "Name:" + result.heros[i].data.name;
-      genderTag.innerText = "Gender:" + result.heros[i].data.appearance.gender;
+      heroNameTag.innerText = "Name: " + result.heros[i].data.name;
+      genderTag.innerText = "Gender: " + result.heros[i].data.appearance.gender;
       placeTag.innerText =
-        "Place-of-birth:" + result.heros[i].data.biography["place-of-birth"];
+        "Place-of-birth: " + result.heros[i].data.biography["place-of-birth"];
       intelTag.innerText =
         "Intelligence: " + result.heros[i].data.powerstats.intelligence;
       strengthTag.innerText =
