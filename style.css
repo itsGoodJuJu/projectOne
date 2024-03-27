@@ -80,6 +80,13 @@
    background-color: gold;
 }
 
+.img {
+    width: 200px;
+    height: 200px;
+}
+
+
+
 .webinfo{
     padding: 35px;
     margin: 20px;
