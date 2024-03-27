@@ -116,3 +116,77 @@ function getActresses(){
 }
 // Actress function call
 getActresses();
+
+
+
+
+// Hero Character API
+// This API Url didn't fetch without Key and Host coded in
+const myHeaders = new Headers();
+myHeaders.append(
+  "X-RapidAPI-Key",
+  "c5c4430e76msh1879a9b94f0249ap19c967jsn5c0244c8d607"
+);
+myHeaders.append("X-RapidAPI-Host", "superhero-api.p.rapidapi.com");
+
+const requestOptions = {
+  method: "GET",
+  headers: myHeaders,
+  redirect: "follow",
+};
+
+fetch("https://superhero-api.p.rapidapi.com", requestOptions)
+  .then((response) => response.json())
+  .then((result) => {
+    for (let i = 0; i < result.heros.length; i++) {
+      // Container
+      let detailedHero = document.createElement("div");
+      detailedHero.classList.add("card");
+
+      // Create an hero image element
+      let heroImage = document.createElement("img");
+
+      // Tags
+      let heroNameTag = document.createElement("p");
+      let genderTag = document.createElement("p");
+      let placeTag = document.createElement("p");
+      let intelTag = document.createElement("p");
+      let strengthTag = document.createElement("p");
+      let speedTag = document.createElement("p");
+      let durabilityTag = document.createElement("p");
+      let powerTag = document.createElement("p");
+      let combatTag = document.createElement("p");
+
+      // Values
+      heroNameTag.innerText = "Name:" + result.heros[i].data.name;
+      genderTag.innerText = "Gender:" + result.heros[i].data.appearance.gender;
+      placeTag.innerText =
+        "Place-of-birth:" + result.heros[i].data.biography["place-of-birth"];
+      intelTag.innerText =
+        "Intelligence: " + result.heros[i].data.powerstats.intelligence;
+      strengthTag.innerText =
+        "Strength: " + result.heros[i].data.powerstats.strength;
+      speedTag.innerText = "Speed: " + result.heros[i].data.powerstats.speed;
+      durabilityTag.innerText =
+        "Durability: " + result.heros[i].data.powerstats.durability;
+      powerTag.innerText = "Power: " + result.heros[i].data.powerstats.power;
+      combatTag.innerText = "Combat: " + result.heros[i].data.powerstats.combat;
+
+      // Link image to src
+      heroImage.src = result.heros[i].data.image.url;
+
+      // appenchild
+      detailedHero.appendChild(heroImage);
+      detailedHero.appendChild(heroNameTag);
+      detailedHero.appendChild(genderTag);
+      detailedHero.appendChild(placeTag);
+      detailedHero.appendChild(intelTag);
+      detailedHero.appendChild(strengthTag);
+      detailedHero.appendChild(speedTag);
+      detailedHero.appendChild(durabilityTag);
+      detailedHero.appendChild(powerTag);
+      detailedHero.appendChild(combatTag);
+
+      document.body.appendChild(detailedHero);
+    }
+  });
