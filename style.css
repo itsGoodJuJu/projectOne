@@ -60,12 +60,9 @@ img {
     height: 150px;
 }
 
+
 .card {
     display: flex;
-    /* float:inline-start; */
-    /* flex-direction: row; */
-    /* flex-wrap: wrap; */
-    /* justify-content: center; */
     width: 75%;
     height: 95%;
     border: 2px solid black;
@@ -74,19 +71,13 @@ img {
 }
 
 #actorsContainer {
-    /* float: left; */
     display: grid;
-    /* flex-direction: row; */
-    /* flex-wrap: wrap; */
     grid-template-columns: repeat(5, 1fr);
     
 }
 
 #actressContainer {
-    /* float: right; */
     display: grid;
-    /* flex-direction: row; */
-    /* flex-wrap: wrap; */
     grid-template-columns: repeat(5, 1fr);
 }
 
@@ -97,6 +88,12 @@ img {
 #actress {
     float:right;
 }
+
+#characterContainer{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
 
 .foot{
    display: flex;
