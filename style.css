@@ -55,21 +55,45 @@
     
 }
 
+img {
+    width: 150px;
+    height: 150px;
+}
+
 
 .card {
     display: flex;
-    float:inline-start;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-    width: 1000px;
-    height: 100%;
+    width: 75%;
+    height: 95%;
+    border: 2px solid black;
+    background-color: rgb(235, 204, 164);
+    margin: 10px;
 }
 
-#pfActress {
-    float: right;
-    width: 2000px;
+#actorsContainer {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    
 }
+
+#actressContainer {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+#actor {
+    float: left;
+}
+
+#actress {
+    float:right;
+}
+
+#characterContainer{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
 
 .foot{
    display: flex;
@@ -81,8 +105,8 @@
 }
 
 img {
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
 }
 
 .icon {
