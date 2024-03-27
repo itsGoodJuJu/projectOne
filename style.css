@@ -96,3 +96,7 @@ img {
     border: 2px;
     border-bottom: 2px solid black;
 }
+
+.bodycolor{
+    background-color: rgb(107, 167, 228);
+}
