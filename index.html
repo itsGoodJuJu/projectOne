@@ -32,20 +32,62 @@
             </div>
         </div>
     </nav>
-<!--  -->
+
     <h1 class="Title">SuperCaster WebPage</h1>
-        <h2 class="greeting">Welcome</h2>
-            <h3 class="Intro">Introduction:</h3>
+    <h2 class="greeting">\_(^__^)_/ Welcome! </h2>
+        <h3 class="Intro">Introduction:</h3>
         <p class="webinfo">
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo nisi ipsa consectetur id officiis laborum excepturi fuga error molestias illum impedit odio accusamus suscipit, sapiente tempore nobis architecto, debitis ea. Lorem ipsum dolor, sit amet consectetur adipisicing elit. A neque labore dicta magnam nihil fuga aspernatur harum possimus sint, repellendus vitae, iste consectetur maxime accusamus. Porro voluptas aliquam consequuntur suscipit!Lorem 
         </p>
-        <h2 class="start">Let's Get Started</h2>
-            <h3 class="guide">Instructions:</h3>
-
-<!-- added a Footer -->
+    <h2 class="start">Let's Get Started</h2>
+        <h3 class="guide">Instructions:</h3>
+            <div id="castContainer">
+                <p>
+                    <label for="team">Create a Team/Movie Name:</label>
+                    <input type="text" name="profilebox" value="" class="form-control" id="teamName">
+                </p>
+                <!-- dropdown box section -->
+                <div class="dropdowns">
+                    <!-- Add button to create more hero and actor dropdowns -->
+                    <div id="addOne">
+                        <div class="anotherOne">
+                            <!-- will clone the below -->
+                            <div class="heroSelect">
+                                <p>Select Hero:</p>
+                                <!-- hero dropdown button -->
+                                <div class="dropdown">
+                                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                      Select Hero
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                      <li><a class="dropdown-item" href="#">Action</a></li>
+                                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="actorSelect">
+                                <p>Select Actor/Actress:</p>
+                                <!-- Actor/Actress dropdown button -->
+                                <div class="dropdown">
+                                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                      Select Actor/Actress
+                                    </button>
+                                    <ul id="dropdownMenu" class="dropdown-menu">
+                                      <li><a class="dropdown-item" href="#">Action</a></li>
+                                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button onclick="addRow()" id="addRowButton">+ Add Row</button>
+                </div>
+            </div>
+    <!-- added a Footer -->
     <div>
         <footer class="foot">City of Refuge COR 2024</footer>
     </div>
-    
 </body>
 </html>
