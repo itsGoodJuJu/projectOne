@@ -17,8 +17,6 @@ function getActors(){
         for(j = 0; j < data.length; j++){
             // Creating a div container
             let actorContainer = document.getElementById("actorsContainer");
-            // let actorDropdown = document.getElementById("dropdownMenu");
-            // let actorContainer = document.createElement("div");
             let actorCard = document.createElement("div");
             actorCard.classList.add("card");
 
@@ -27,7 +25,6 @@ function getActors(){
 
             // Creating p tags for each property
             let nameTag = document.createElement("p");
-            // let nameChoice = document.createElement("li");
             let ageTag = document.createElement("p");
             let nationalityTag = document.createElement("p");
             let moviesTag = document.createElement("p");
@@ -41,7 +38,6 @@ function getActors(){
 
             // Adding the value paths to the inner text of tags
             nameTag.innerText = data[j].name;
-            // nameChoice.innerText = data[j].name
             ageTag.innerText = "Age: " + (currentYear - data[j].birth_year);
             nationalityTag.innerText = "Nationality: " + data[j].nationality;
             moviesTag.innerText = "Starred in: " + data[j].known_for;
@@ -49,15 +45,19 @@ function getActors(){
             /// Appending each p tag to actressContainer
             actorCard.appendChild(actorImage);
             actorCard.appendChild(nameTag);
-            // actorDropdown.appendChild(nameChoice);
             actorCard.appendChild(ageTag);
             actorCard.appendChild(nationalityTag);
             actorCard.appendChild(moviesTag);
+
+            
             
             // Appending container to the body
             actorContainer.appendChild(actorCard);
-            // document.body.appendChild(actorContainer);
+            
+            
+
         }
+        console.log()
     })
 }
 // Actor function call
@@ -120,10 +120,45 @@ function getActresses(){
         }
     })
 }
+
 // Actress function call
 getActresses();
 
 
+// dropdown selection function
+function dropFunction() {
+  // actor dropdown
+  fetch("https://freetestapi.com/api/v1/actors")
+  .then((response) => response.json())
+  .then((data) => {
+      for(i = 0; i < data.length; i++){
+          // dropdown
+          let actorDropdown = document.getElementById("dropdownMenu");
+          // let actorItems = document.createElement("ul");
+          let nameChoice = document.createElement("option");
+          nameChoice.innerText = data[i].name;
+          // actorItems.appendChild(nameChoice);
+          actorDropdown.appendChild(nameChoice);
+      }
+  });
+
+  // actress dropdown
+  fetch("https://freetestapi.com/api/v1/actresses")
+  .then(response => response.json())
+  .then((data) => {
+    for(j = 0; j < data.length; j++){
+      // dropdown
+      let actressDropdown = document.getElementById("dropdownMenu");
+      // let actorItems = document.createElement("ul");
+      let nameChoice = document.createElement("option");
+      nameChoice.innerText = data[j].name;
+      // actorItems.appendChild(nameChoice);
+      actressDropdown.appendChild(nameChoice);
+  }
+  });
+}
+
+dropFunction();
 
 
 // Hero Character API
@@ -195,32 +230,98 @@ fetch("https://superhero-api.p.rapidapi.com", requestOptions)
       heroCard.appendChild(combatTag);
 
       heroContainer.appendChild(heroCard);
+
+      // dropdown
     }
   });
 
-
-// Cast Building Function
-function buildCast() {
-    let castContainer = document.getElementById("castContainer");
-    
-
+  // hero dropdown button
+  function heroSelect(){
+    fetch("https://superhero-api.p.rapidapi.com", requestOptions)
+      .then((response) => response.json())
+      .then((result) => {
+        for(i = 0; i < result.heros.length; i++){
+          // dropdown
+          let heroDropdown = document.getElementById("heroOptions");
+          let heroChoice = document.createElement("option");
+          heroChoice.innerText = result.heros[i].data.name;
+          heroDropdown.appendChild(heroChoice);
+      }
+      });
 }
 
+heroSelect();
+
+
+// function to add additional selection rows
 function addRow() {
     document.addEventListener("DOMContentLoaded", function () {
         let addRowContainer = document.getElementById("addOne");
         let addButton = document.getElementById("addRowButton");
     
-        function cloneElement() {
+        function copyElement() {
             const elementToClone = document.querySelector(".anotherOne");
             const clonedElement = elementToClone.cloneNode(true);
             addRowContainer.appendChild(clonedElement);
         }
-        addButton.addEventListener("click", cloneElement);
+        addButton.addEventListener("click", copyElement);
     });
 }
 
 addRow();
+
+// submit function
+function getCast() {
+    // popup window
+    let castPopup = document.getElementById('finalPopup');
+    castPopup.style.display = "block";
+
+    let outputName = document.querySelector('.form-control'); 
+    // Get the value of the input field 
+    let userInput = outputName.value; 
+    document.querySelector('.outputName').innerText = userInput;
+          
+
+    // hero selection shown in popup
+    let selectHero = document.querySelector('.heroOptions');
+    // let heroPopupContent = document.getElementsByClassName("popup-content-button")
+    // let divHero = document.createElement("span");
+    // divHero.classList.add("outputHero");
+    let outputHero = selectHero.options[selectHero.selectedIndex].value;
+    // let heroTag = document.createElement("p");
+    // heroTag.innerText = outputHero;
+    // divHero.appendChild(heroTag);
+    // heroPopupContent.appendChild(divHero);
+    document.querySelector('.outputHero').innerText = outputHero;
+
+    // actor selection shown in popup
+    let selectActor = document.querySelector('.dropdownMenu');
+    let outputActor = selectActor.options[selectActor.selectedIndex].value;
+    document.querySelector('.outputActor').innerText = outputActor;
+
+}
+
+function closeOut() {
+  let closePopup = document.getElementById('finalPopup');
+  closePopup.style.display = "none";
+}
+
+function getNameSub() {
+    // let nameSub = document.getElementsByClassName("teamName")[0];
+
+    // console.log(document.getElementById("teamName")[0]);
+
+}
+
+// Cast Building Function
+// function buildCast() {
+//     let nameSelection = document.getElementById("teamOrMovie");
+//     let nameTyped = document.getElementById("teamName")
+//     console.log("teamName")
+    
+// }
+// buildCast();
+
 
 
 

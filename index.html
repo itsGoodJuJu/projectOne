@@ -36,15 +36,22 @@
     <h2 class="greeting">\_(^__^)_/ Welcome! </h2>
         <h3 class="Intro">Introduction:</h3>
         <p class="webinfo">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo nisi ipsa consectetur id officiis laborum excepturi fuga error molestias illum impedit odio accusamus suscipit, sapiente tempore nobis architecto, debitis ea. Lorem ipsum dolor, sit amet consectetur adipisicing elit. A neque labore dicta magnam nihil fuga aspernatur harum possimus sint, repellendus vitae, iste consectetur maxime accusamus. Porro voluptas aliquam consequuntur suscipit!Lorem 
+                Hello and welcome to SuperCast! Here, you can create your dream cast for your dream movie. By assigning actors/actresses to specific characters, you can build the ideal cast for a movie named by you. build your SuperCast and share with your friends and families. Maybe you can inspire the next great movie!
         </p>
     <h2 class="start">Let's Get Started</h2>
-        <h3 class="guide">Instructions:</h3>
+        <h3 class="instructions">Instructions:</h3>
+            <p class="guide">Enter a name for your dream team or original movie into the input box. Then, select a character you wish to star in the movie and the actor or actress you would like to play that character. You can add additional rows to include other characters. Once you have completed your list of characters and actors, click "Submit Cast" </p>
+
+        <!-- functional interaction to create movie cast -->
+            
             <div id="castContainer">
-                <p>
-                    <label for="team">Create a Team/Movie Name:</label>
-                    <input type="text" name="profilebox" value="" class="form-control" id="teamName">
-                </p>
+                <div class="nameSubmission">
+                    <p class="nameSubmission">
+                        <!-- where you can type in your team or movie name submission -->
+                        <label class="label" for="team">Create a Team/Movie Name:</label>
+                        <input type="text" name="profilebox" placeholder="Enter your team or movie name..." class="form-control" id="teamName">
+                    </p>
+                </div>
                 <!-- dropdown box section -->
                 <div class="dropdowns">
                     <!-- Add button to create more hero and actor dropdowns -->
@@ -52,41 +59,64 @@
                         <div class="anotherOne">
                             <!-- will clone the below -->
                             <div class="heroSelect">
-                                <p>Select Character:</p>
+                                <p>
+                                    Select Character: 
+                                    <select name="hero" id="heroOptions" class="heroOptions"></select>
+                                </p>
                                 <!-- hero dropdown button -->
-                                <div class="dropdown">
-                                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                      Select Character
-                                    </button>
-                                    <ul class="dropdown-menu">
-                                      <li><a class="dropdown-item" href="#">Action</a></li>
-                                      <li><a class="dropdown-item" href="#">Another action</a></li>
-                                      <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                    </ul>
-                                </div>
+                                
                             </div>
                             <div class="actorSelect">
-                                <p>Select Actor/Actress:</p>
+                                <p>
+                                    Select Actor/Actress:
+                                    <select name="actor" id="dropdownMenu" class="dropdownMenu"></select>
+                                </p>
                                 <!-- Actor/Actress dropdown button -->
-                                <div class="dropdown">
-                                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                      Select Actor/Actress
-                                    </button>
-                                    <ul id="dropdownMenu" class="dropdown-menu">
-                                      <li><a class="dropdown-item" href="#">Action</a></li>
-                                      <li><a class="dropdown-item" href="#">Another action</a></li>
-                                      <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                    </ul>
-                                </div>
+                                
                             </div>
                         </div>
                     </div>
-                    <button onclick="addRow()" id="addRowButton">+ Add Row</button>
+                    <div class="rowButton">
+                        <button onclick="addRow()" id="addRowButton">+ Add Row</button>
+                    </div>
+                </div>
+                <div id="centerSubmit">
+                    <!-- submit button to compile cast info and create a popup -->
+                    <button id="submitCast" onclick="getCast()" type="button" class="btn btn-success">Submit Cast</button>
                 </div>
             </div>
+            
+            
+    <!-- pop-up -->
+    <div id="finalPopup" class="popup">
+        <div class="popup-content">
+            <div class="popup-content-button">
+                <button id="closePopup" onclick="closeOut()">x</button>
+            </div>
+            <div id="popupText">
+                <h2>
+                    Here is your Cast!
+                </h2>
+                <p>
+                    <span class="outputName"></span>
+                </p>
+                <p>
+                    Character: <span class="outputHero"></span>
+                </p>
+                <p>
+                    Actor/Actress: <span class="outputActor"></span>
+                </p>
+                <h3 id="teamOrMovie"></h3>
+                <ul id="castSelections"></ul>
+            </div>
+            
+        </div>
+    </div>
+
+            
     <!-- added a Footer -->
-    <div>
-        <footer class="foot">City of Refuge COR 2024</footer>
+    <div class="footerDiv">
+        <footer class="foot">COR: Software Development Cohort ©2024</footer>
     </div>
 
     <!-- bootstrap script -->
