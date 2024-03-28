@@ -124,6 +124,12 @@ function dropFunction() {
   fetch("https://freetestapi.com/api/v1/actors")
   .then((response) => response.json())
   .then((data) => {
+      for(j = 0; j < data.length; j++){
+        if(data[j].death_year > 0) {
+            data.splice(j, 1);
+            j--;
+        }
+      }
       for(i = 0; i < data.length; i++){
           // dropdown
           let actorDropdown = document.getElementById("dropdownMenu");
@@ -139,6 +145,12 @@ function dropFunction() {
   fetch("https://freetestapi.com/api/v1/actresses")
   .then(response => response.json())
   .then((data) => {
+      for(j = 0; j < data.length; j++){
+        if(data[j].death_year > 0) {
+            data.splice(j, 1);
+            j--;
+        }
+      }
     for(j = 0; j < data.length; j++){
       // dropdown
       let actressDropdown = document.getElementById("dropdownMenu");
