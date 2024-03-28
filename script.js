@@ -49,13 +49,8 @@ function getActors(){
             actorCard.appendChild(nationalityTag);
             actorCard.appendChild(moviesTag);
 
-            
-            
             // Appending container to the body
             actorContainer.appendChild(actorCard);
-            
-            
-
         }
         console.log()
     })
@@ -116,11 +111,9 @@ function getActresses(){
 
             // Appending container to the body
             actressContainer.appendChild(actressCard);
-
         }
     })
 }
-
 // Actress function call
 getActresses();
 
@@ -157,7 +150,6 @@ function dropFunction() {
   }
   });
 }
-
 dropFunction();
 
 
@@ -230,8 +222,6 @@ fetch("https://superhero-api.p.rapidapi.com", requestOptions)
       heroCard.appendChild(combatTag);
 
       heroContainer.appendChild(heroCard);
-
-      // dropdown
     }
   });
 
@@ -249,7 +239,6 @@ fetch("https://superhero-api.p.rapidapi.com", requestOptions)
       }
       });
 }
-
 heroSelect();
 
 
@@ -267,8 +256,8 @@ function addRow() {
         addButton.addEventListener("click", copyElement);
     });
 }
-
 addRow();
+
 
 // submit function
 function getCast() {
@@ -284,14 +273,7 @@ function getCast() {
 
     // hero selection shown in popup
     let selectHero = document.querySelector('.heroOptions');
-    // let heroPopupContent = document.getElementsByClassName("popup-content-button")
-    // let divHero = document.createElement("span");
-    // divHero.classList.add("outputHero");
     let outputHero = selectHero.options[selectHero.selectedIndex].value;
-    // let heroTag = document.createElement("p");
-    // heroTag.innerText = outputHero;
-    // divHero.appendChild(heroTag);
-    // heroPopupContent.appendChild(divHero);
     document.querySelector('.outputHero').innerText = outputHero;
 
     // actor selection shown in popup
@@ -306,21 +288,7 @@ function closeOut() {
   closePopup.style.display = "none";
 }
 
-function getNameSub() {
-    // let nameSub = document.getElementsByClassName("teamName")[0];
 
-    // console.log(document.getElementById("teamName")[0]);
-
-}
-
-// Cast Building Function
-// function buildCast() {
-//     let nameSelection = document.getElementById("teamOrMovie");
-//     let nameTyped = document.getElementById("teamName")
-//     console.log("teamName")
-    
-// }
-// buildCast();
 
 
 
