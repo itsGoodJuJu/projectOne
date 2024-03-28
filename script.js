@@ -288,6 +288,10 @@ function closeOut() {
   closePopup.style.display = "none";
 }
 
+// JQuery UI Animation 
+$(document).click(function() {
+  $("#welcomeContainer").effect("bounce", "slow");
+});
 
 
 
