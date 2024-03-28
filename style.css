@@ -2,15 +2,15 @@
     border: 5px solid black;
 }
 
-.navbar{
-    border: 5px solid black;
+.navbar-brand{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
 }
 
 .Title{
     font-size: 75px;
     text-align: center;
-    font-family:'Times New Roman', Times, serif;
-    font-style: italic;
+    font-family:'Courier New', Courier, monospace;
     font-weight: bold;
     padding: 25px;
     margin: 10px;
@@ -21,8 +21,7 @@
 .greeting{
     text-align: center;
     font-size: 50px;
-    font-family:inherit;
-    font-style: italic;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     
 }
 
@@ -30,44 +29,86 @@
     padding: 5px;
     text-align:left;
     text-indent: 2%;
-    font-family:inherit;
-    font-style: italic;
+    font-family:'Courier New', Courier, monospace;
     border-bottom: 2px solid black;
     
+}
+
+.webinfo {
+    font-family:'Courier New', Courier, monospace;
+    font-size: 18px;
 }
 
 .start{
     text-align: center;
     font-size: 50px;
-    font-family:inherit;
-    font-style: italic;
+    font-family:'Courier New', Courier, monospace;
     padding: 25px;
     
+}
+
+.instructions{
+    padding: 5px;
+    text-align:left;
+    text-indent: 2%;
+    font-family:'Courier New', Courier, monospace;
+    border-bottom: 2px solid black;
 }
 
 .guide{
     padding: 5px;
     text-align:left;
     text-indent: 2%;
-    font-family:inherit;
-    font-style: italic;
+    font-family:'Courier New', Courier, monospace;
+    font-size: 18px;
     border-bottom: 2px solid black;
+    margin-top: 10px;
     
 }
 
 img {
     width: 150px;
     height: 150px;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-top: 10px;
 }
 
 
 .card {
     display: flex;
-    width: 75%;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
     height: 95%;
     border: 2px solid black;
-    background-color: rgb(235, 204, 164);
+    background-color: rgb(240, 215, 183);
     margin: 10px;
+}
+
+/* actors and actresses cards */
+
+#actor {
+    float: left;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#actor > h5 {
+    font-weight: bold;
+    font-size: 35px;
+    margin-top: 50px;
+}
+
+#actress {
+    float:right;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#actress > h5 {
+    font-weight: bold;
+    font-size: 35px;
+    margin-top: 80px;
+    border-top: 2px solid black;
 }
 
 #actorsContainer {
@@ -112,6 +153,8 @@ img {
 .icon {
     width: 50px;
     height: 50px;
+    border: none;
+    margin: 0;
 }
 
 .webinfo{
@@ -124,3 +167,134 @@ img {
 .bodycolor{
     background-color: rgb(107, 167, 228);
 }
+
+/* submit button for cast builder */
+#submitCast{
+    background-color: rgb(255, 72, 72);
+    border: solid 1px black;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: larger;
+    margin-top: 10px;
+    width: 20%;
+}
+
+
+/* popup */
+
+.popup {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+.popup-content {
+    background-color: rgb(244, 211, 244);
+    margin: 10% auto;
+    padding: 10px;
+    border: 1px solid black;
+    width: 50%;
+    font-weight: bolder;
+}
+
+#popupText > h2 {
+    color: rgb(107, 167, 228);
+    margin-bottom: 30px;
+}
+
+#popupText {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: black;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* close popup button X */
+.popup-content-button {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#closePopup {
+    background-color: black;
+    color: white;
+    border: 2px solid rgb(107, 167, 228);
+}
+
+
+.anotherOne{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin-bottom: 30px;
+}
+
+.actorSelect {
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+.heroSelect{
+    font-weight: bold;
+}
+
+.rowButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+#addRowButton{
+    background-color: gold;
+    border-radius: 5px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#centerSubmit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+#castContainer {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#teamName {
+    width: 95%;
+    
+}
+
+.nameSubmission{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.label{
+    width: 450px;
+}
+
+
+/* footer */
+.foot{
+    display: flex;
+    justify-content: center;
+    margin-top: 70px;
+    margin-bottom: 20px;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    font-family:'Courier New', Courier, monospace;
+    background-color: gold;
+ }
