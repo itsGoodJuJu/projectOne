@@ -78,6 +78,7 @@ img {
     margin-top: 10px;
 }
 
+
 .card {
     display: flex;
     /* float:inline-start; */
@@ -126,6 +127,34 @@ img {
 #actressContainer {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
+}
+
+#actor {
+    float: left;
+}
+
+#actress {
+    float:right;
+}
+
+#characterContainer{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+
+.foot{
+   display: flex;
+   justify-content: center;
+   margin-top: 300px;
+   border-top: 2px solid black;
+   font-family: cursive;
+   background-color: gold;
+}
+
+img {
+    width: 150px;
+    height: 150px;
 }
 
 .icon {
