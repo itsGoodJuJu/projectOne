@@ -289,8 +289,8 @@ function closeOut() {
 }
 
 // JQuery UI Animation 
-$(document).click(function() {
-  $("#welcomeContainer").effect("bounce", "slow");
+$(".greeting").click(function() {
+  $(this).effect("bounce", "slow");
 });
 
 
